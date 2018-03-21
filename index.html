@@ -14,8 +14,9 @@
   <body>
     <section class="section">
       <div class="container">
-        <div class="columns ff7">
+        <div class="columns ff7 header">
           <div class="column is-2 id="right-top"">
+                <button id="button">Attack</button>
           </div>
           <div class="column">
             <h1 class="has-text-centered">Final Fantasy Fight</h1>
@@ -24,12 +25,12 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="columns ff7">
+      <div class="container" id="heroes">
+        <div class="columns ff7 choose-player">
           <div class="column">
             <div class="columns player-row" id="terra">
               <div class="column is-2 center-item">
-                <img src="assets/images/terra/status.gif" class="player-image">
+                <img src="assets/images/terra/status.gif" class="player-image" id="terra">
               </div>
               <div class="column is-4">
                 <h1>Terra Branford</h1>
@@ -43,7 +44,7 @@
             </div>
             <div class="columns player-row" id="locke">
               <div class="column is-2 center-item">
-                <img src="assets/images/locke/status.gif" class="player-image">
+                <img src="assets/images/locke/status.gif" class="player-image" id="locke">
               </div>
               <div class="column is-4">
                 <h1>Locke Cole</h1>
@@ -57,7 +58,7 @@
             </div>
             <div class="columns player-row" id="celes">
               <div class="column is-2 center-item">
-                <img src="assets/images/celes/status.gif" class="player-image">
+                <img src="assets/images/celes/status.gif" class="player-image" id="celes">
               </div>
               <div class="column is-4">
                 <h1>Celes Chere</h1>
@@ -71,7 +72,7 @@
             </div>
             <div class="columns player-row" id="mog">
               <div class="column is-2 center-item">
-                <img src="assets/images/mog/status.gif" class="player-image">
+                <img src="assets/images/mog/status.gif" class="player-image" id="mog">
               </div>
               <div class="column is-4">
                 <h1>Mog</h1>
@@ -86,19 +87,21 @@
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="columns">
+
+      <!-- enemies -->
+      <div class="container" id="enemies">
+        <div class="columns choose-enemy">
           <div class="column center-item">
-            <img src="assets/images/ultros/enemy.gif" class="enemy-image">
+            <img src="assets/images/ultros/enemy.gif" class="enemy-image" id="ultros" value="ultros">
           </div>
           <div class="column center-item">
-            <img src="assets/images/kefka/enemy.gif" class="enemy-image">
+            <img src="assets/images/kefka/enemy.gif" class="enemy-image" id="kefka" value="kefka">
           </div>
           <div class="column center-item">
-            <img src="assets/images/dragon/enemy.gif" class="enemy-image">
+            <img src="assets/images/dragon/enemy.gif" class="enemy-image" id="dragon" value="dragon">
           </div>
           <div class="column center-item">
-            <img src="assets/images/atma/enemy.gif" class="enemy-image">
+            <img src="assets/images/atma/enemy.gif" class="enemy-image" id="atma" value="atma">
           </div>
         </div>
       </div>
@@ -106,10 +109,10 @@
       <div class="container" id="battle">
         <div class="columns battle-area center-item">
           <div class="column enemy-battle">
-            <img src="assets/images/ultros/enemy.gif" class="enemy-sprite">
+            <img class="enemy-sprite" id="enemy-sprite">
           </div>
           <div class="column player-battle">
-            <img src="assets/images/terra/action.gif" class="player-sprite">
+            <img class="player-sprite" id="player-sprite">
           </div>
         </div>
         <!-- Scoring -->
@@ -117,7 +120,7 @@
           <div class="column is-5 ff7">
 
           </div>
-          <div class="column is-2 ff7 has-text-centered">
+          <div class="column is-2 ff7 has-text-centered" id="attack-button">
             <p>Attack!</p>
           </div>
           <div class="column is-5 ff7">
@@ -126,14 +129,16 @@
         </div>
       </div>
     </section>
-
-    <button id="button">Attack</button>
     <!-- audio -->
     <!-- <audio autoplay loop>
       <source src="assets/music/prelude.mp3" type="audio/mp3">
     </audio> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"></script>
     <script src="assets/js/game.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
