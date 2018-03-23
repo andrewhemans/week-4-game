@@ -1,5 +1,10 @@
 body{
   background-color: #333;
+  height: 100vh;
+}
+
+p {
+  font-size: 22px;
 }
 
 .header {
@@ -46,7 +51,7 @@ div.ff7 *{
 }
 
 .player-image {
-
+  cursor: pointer;
 }
 
 .player-row {
@@ -59,9 +64,18 @@ div.ff7 *{
   justify-content: center;
 }
 
+.center-enemy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
 .enemy-image {
   width: 100%;
   align-self: center;
+  cursor: pointer;
 }
 
 .battle-area {
@@ -79,7 +93,7 @@ div.ff7 *{
 }
 
 .score-board {
-  height: 15vh;
+  /* height: 15vh; */
 }
 
 .player-battle {
@@ -105,12 +119,40 @@ div.ff7 *{
 }
 
 #enemies {
-  /* visibility: hidden; */
   display: none;
 }
 
 #battle {
-  /* visibility: hidden; */
   display: none;
 
+}
+
+#loss {
+  display: none;
+  justify-content: center;
+  height: 80vh;
+  align-items: center;
+}
+
+.scores > p {
+  font-size: 22px;
+}
+
+.attack {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.attack > p {
+  font-size: 22px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+#sprite-div {
+  cursor: pointer;
 }

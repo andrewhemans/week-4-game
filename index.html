@@ -8,6 +8,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <link type="text/css" rel="stylesheet" href="assets/css/app.css">
+    <!-- <link rel="shortcut icon" href="assets/vulcan.ico" type="image/x-icon"> -->
+    <!-- <link rel="icon" href="assets/vulcan.ico" type="image/x-icon"> -->
 
     <title>Final Fantasy Fight</title>
   </head>
@@ -16,10 +18,9 @@
       <div class="container">
         <div class="columns ff7 header">
           <div class="column is-2 id="right-top"">
-                <button id="button">Attack</button>
           </div>
           <div class="column">
-            <h1 class="has-text-centered">Final Fantasy Fight</h1>
+            <h1 class="has-text-centered" id="header-text">Final Fantasy Fight</h1>
           </div>
           <div class="column is-2" id="right-top">
           </div>
@@ -35,25 +36,11 @@
               <div class="column is-4">
                 <h1>Terra Branford</h1>
               </div>
-              <div class="column is-3">
-                <h1>Health: 100</h1>
+              <div class="column is-3 health">
+                <!-- <h1>Health: 100</h1> -->
               </div>
-              <div class="column is-3">
-                <h1>Strength: 20</h1>
-              </div>
-            </div>
-            <div class="columns player-row" id="locke">
-              <div class="column is-2 center-item">
-                <img src="assets/images/locke/status.gif" class="player-image" id="locke">
-              </div>
-              <div class="column is-4">
-                <h1>Locke Cole</h1>
-              </div>
-              <div class="column is-3">
-                <h1>Health: 100</h1>
-              </div>
-              <div class="column is-3">
-                <h1>Strength: 20</h1>
+              <div class="column is-3 strength">
+                <!-- <h1>Strength: 20</h1> -->
               </div>
             </div>
             <div class="columns player-row" id="celes">
@@ -63,11 +50,25 @@
               <div class="column is-4">
                 <h1>Celes Chere</h1>
               </div>
-              <div class="column is-3">
-                <h1>Health: 100</h1>
+              <div class="column is-3 health">
+                <!-- <h1>Health: 100</h1> -->
               </div>
-              <div class="column is-3">
-                <h1>Strength: 20</h1>
+              <div class="column is-3 strength">
+                <!-- <h1>Strength: 20</h1> -->
+              </div>
+            </div>
+            <div class="columns player-row" id="locke">
+              <div class="column is-2 center-item">
+                <img src="assets/images/locke/status.gif" class="player-image" id="locke">
+              </div>
+              <div class="column is-4">
+                <h1>Locke Cole</h1>
+              </div>
+              <div class="column is-3 health">
+                <!-- <h1>Health: 100</h1> -->
+              </div>
+              <div class="column is-3 strength">
+                <!-- <h1>Strength: 20</h1> -->
               </div>
             </div>
             <div class="columns player-row" id="mog">
@@ -77,11 +78,11 @@
               <div class="column is-4">
                 <h1>Mog</h1>
               </div>
-              <div class="column is-3">
-                <h1>Health: 100</h1>
+              <div class="column is-3 health">
+                <!-- <h1>Health: 100</h1> -->
               </div>
-              <div class="column is-3">
-                <h1>Strength: 20</h1>
+              <div class="column is-3 strength">
+                <!-- <h1>Strength: 20</h1> -->
               </div>
             </div>
           </div>
@@ -91,17 +92,21 @@
       <!-- enemies -->
       <div class="container" id="enemies">
         <div class="columns choose-enemy">
-          <div class="column center-item">
-            <img src="assets/images/ultros/enemy.gif" class="enemy-image" id="ultros" value="ultros">
-          </div>
-          <div class="column center-item">
-            <img src="assets/images/kefka/enemy.gif" class="enemy-image" id="kefka" value="kefka">
-          </div>
-          <div class="column center-item">
+          <div class="column center-enemy">
             <img src="assets/images/dragon/enemy.gif" class="enemy-image" id="dragon" value="dragon">
+            <h1>Health: 100</h1>
           </div>
-          <div class="column center-item">
+          <div class="column center-enemy">
+            <img src="assets/images/ultros/enemy.gif" class="enemy-image" id="ultros" value="ultros">
+            <h1>Health: 120</h1>
+          </div>
+          <div class="column center-enemy">
             <img src="assets/images/atma/enemy.gif" class="enemy-image" id="atma" value="atma">
+            <h1>Health: 160</h1>
+          </div>
+          <div class="column center-enemy">
+            <img src="assets/images/kefka/enemy.gif" class="enemy-image" id="kefka" value="kefka">
+            <h1>Health: 200</h1>
           </div>
         </div>
       </div>
@@ -117,14 +122,23 @@
         </div>
         <!-- Scoring -->
         <div class="columns score-board">
-          <div class="column is-5 ff7">
+          <div class="column is-5 ff7 scores" id="enemy-score">
 
           </div>
-          <div class="column is-2 ff7 has-text-centered" id="attack-button">
+          <div class="column is-2 ff7 has-text-centered attack" id="attack-button">
+            <!-- <button id="button">Attack</button> -->
             <p>Attack!</p>
           </div>
-          <div class="column is-5 ff7">
+          <div class="column is-5 ff7 scores" id="hero-score">
 
+          </div>
+        </div>
+      </div>
+      <!-- Losing Screen -->
+      <div class="container" id="loss">
+        <div class="columns">
+          <div class="column" id="sprite-div">
+            <!-- <img src="assets/images/mog/dead.gif" class="" id="loss-sprite"> -->
           </div>
         </div>
       </div>
